@@ -1,7 +1,7 @@
 resource "azurerm_lb" "load_balancer" {
   for_each = local.lb_list
   name = each.value.name
-  resource_group_name = var.resource_group_output[each.value.name].name
+  resource_group_name = var.resource_group_output[each.value.resource_group_name].name
   location = each.value.location
   sku = each.value.sku
   sku_tier = each.value.sku_tier
