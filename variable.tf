@@ -18,7 +18,7 @@ variable "public_ip_output" {
   
 }
 
-variable "vnet_subnet_output" {
+variable "subnet_output" {
   type = map(any)
   default = {}
   description = "subnet objects"
